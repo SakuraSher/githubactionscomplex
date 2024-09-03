@@ -1,10 +1,10 @@
-name: my first workflow
-on: push
-
+name: GitHub Actions Demo
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+on: [push]
 jobs:
-    first_job:
-        runs-on: ubuntu
-        steps:
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
+    steps:
         -  name: echo
            run: echo "My first workjob"
 
@@ -13,3 +13,7 @@ jobs:
 
         - name: read file
           run: cat readme.md
+
+
+
+        
