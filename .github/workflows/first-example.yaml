@@ -8,6 +8,9 @@ jobs:
         -  name: echo
            run: echo "My first workjob"
 
+        -  name: Checkout Action
+           uses: checkout@v4
+
         - name: list files
           run: ls
 
