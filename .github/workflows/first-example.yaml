@@ -10,6 +10,8 @@ jobs:
 
         -  name: Checkout Action
            uses: checkout@v4
+           with:
+             path: main
 
         - name: list files
           run: ls
