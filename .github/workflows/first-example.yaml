@@ -5,13 +5,14 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
-        -  name: echo
-           run: echo "My first workjob"
-
         -  name: Checkout Action
            uses: checkout@v4
            with:
              path: main
+
+        -  name: echo
+           run: echo "My first workjob"
+
 
         - name: list files
           run: ls
