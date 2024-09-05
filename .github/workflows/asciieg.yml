@@ -24,7 +24,7 @@ jobs:
            run: ls
 
         - name: read file
-          run: cat readme.md
+          run: cat dragon.txt
 
 
 
