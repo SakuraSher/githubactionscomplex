@@ -1,5 +1,5 @@
 name: GitHub Actions Demo
-run-name: $ExploreMultiJob🚀
+run-name: ExploreMultiJob🚀
 on: [push]
 jobs:
   ExploreStep1:
@@ -25,7 +25,7 @@ jobs:
       
 
   ExploreStep2:
-    needs: ExploreStep2
+    needs: ExploreStep1
     runs-on: ubuntu-latest
     steps:
         - name: download file
