@@ -1,5 +1,5 @@
 name: GitHub Actions Demo
-run-name: $cowsay🚀
+run-name: $ExploreMultiJob🚀
 on: [push]
 jobs:
   ExploreStep1:
@@ -25,6 +25,7 @@ jobs:
       
 
   ExploreStep2:
+    needs: ExploreStep2
     runs-on: ubuntu-latest
     steps:
         - name: download file
@@ -36,6 +37,7 @@ jobs:
           run: grep -i "le" dragon.txt
      
   ExploreStep3:
+    needs: ExploreStep2
     runs-on: ubuntu-latest
     steps:
         - name: download file
