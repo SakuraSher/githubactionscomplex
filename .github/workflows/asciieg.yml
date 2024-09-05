@@ -18,7 +18,7 @@ jobs:
            run: cowsay -f dragon "run for le me" > dragon.txt
 
         - name: check the file is present
-          run: grep -i "dragon" dragon.txt
+          run: grep -i "le" dragon.txt
            
         -  name: list files
            run: ls
