@@ -2,7 +2,7 @@ name: GitHub Actions Demo
 run-name: $cowsay🚀
 on: [push]
 jobs:
-  Explore-GitHub-Actions:
+  ExploreStep1:
     runs-on: ubuntu-latest
     steps:
         -  name: Checkout Action
@@ -16,6 +16,7 @@ jobs:
 
         -  name: run ascii 
            run: cowsay -f dragon "run for le me" > dragon.txt
+           
         -  name: upload file
            uses: actions/upload-artifact@v4
            with:
@@ -26,42 +27,23 @@ jobs:
   ExploreStep2:
     runs-on: ubuntu-latest
     steps:
-        -  name: Checkout Action
-           uses: actions/checkout@v4
-
-        -  name: echo
-           run: echo "My first workjob"
-
-        -  name: install cowsay
-           run: sudo apt install cowsay -y
-
-        -  name: run ascii 
-           run: cowsay -f dragon "run for le me" > dragon.txt
-
+        - name: download file
+          uses: actions/download-artifact@v4
+          with:
+            name: dragon-file
+            path: drangon.txt
         - name: check the file is present
           run: grep -i "le" dragon.txt
-           
-        -  name: list files
-           run: ls
-
-        - name: read file
-          run: cat dragon.txt
-
+     
   ExploreStep3:
     runs-on: ubuntu-latest
     steps:
-        -  name: Checkout Action
-           uses: actions/checkout@v4
-
-        -  name: echo
-           run: echo "My first workjob"
-
-        -  name: install cowsay
-           run: sudo apt install cowsay -y
-
-        -  name: run ascii 
-           run: cowsay -f dragon "run for le me" > dragon.txt
-
+        - name: download file
+          uses: actions/download-artifact@v4
+          with:
+            name: dragon-file
+            path: drangon.txt
+            
         - name: check the file is present
           run: grep -i "le" dragon.txt
            
