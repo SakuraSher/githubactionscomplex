@@ -7,8 +7,6 @@ jobs:
     steps:
         -  name: Checkout Action
            uses: actions/checkout@v4
-           with:
-             repository: ${{ github.repository }}
 
         -  name: echo
            run: echo "My first workjob"
