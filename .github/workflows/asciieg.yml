@@ -1,0 +1,31 @@
+name: GitHub Actions Demo
+run-name: $cowsay🚀
+on: [push]
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
+    steps:
+        -  name: Checkout Action
+           uses: actions/checkout@v4
+
+        -  name: echo
+           run: echo "My first workjob"
+
+        -  name: install cowsay
+           run: apt install cosay -y
+
+        -  name: run ascii 
+           run: cowsay -f dragon "run for le me" > dragon.txt
+
+        - name: check the file is present
+          run: grep -i "dragon" dragon.txt
+           
+        -  name: list files
+           run: ls
+
+        - name: read file
+          run: cat readme.md
+
+
+
+        
