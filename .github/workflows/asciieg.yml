@@ -12,7 +12,7 @@ jobs:
            run: echo "My first workjob"
 
         -  name: install cowsay
-           run: sudo apt install cosay -y
+           run: sudo apt install cowsay -y
 
         -  name: run ascii 
            run: cowsay -f dragon "run for le me" > dragon.txt
