@@ -1,7 +1,7 @@
 name:  Exploring Variables
 on: 
   schedule:
-    - cron: "*/1 * * * *"
+    - cron: "*/10 * * * *"
 jobs:
     docker: 
         runs-on: ubuntu:latest
