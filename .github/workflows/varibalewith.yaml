@@ -9,3 +9,15 @@ jobs:
         steps:
         - name: Docker Build
           run: echo docker build
+
+    deploy: 
+        concurrency: 
+            group: production
+            cancel-in-progress: true
+        runs-on: ubuntu:latest
+        steps:
+        - name: Docker Build
+          run: |
+           echo docker build
+           sleep 200s
+
