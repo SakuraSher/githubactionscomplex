@@ -16,7 +16,7 @@ jobs:
         concurrency: 
             group: production
             cancel-in-progress: true
-        runs-on: ubuntu:latest
+        runs-on: ubuntu-latest
         steps:
         - name: Docker Build
           timeout-minutes: 1 
