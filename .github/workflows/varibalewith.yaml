@@ -1,10 +1,12 @@
 name:  Exploring Variables
 on: 
     workflow_dispatch: 
+    push:
 #   schedule:
 #     - cron: "*/10 * * * *"
 jobs:
     docker: 
+        timeout-minutes: 1 
         runs-on: ubuntu-latest
         steps:
         - name: Docker Build
@@ -17,6 +19,7 @@ jobs:
         runs-on: ubuntu:latest
         steps:
         - name: Docker Build
+          timeout-minutes: 1 
           run: |
            echo docker build
            sleep 200s
