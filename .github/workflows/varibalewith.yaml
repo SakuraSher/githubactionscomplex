@@ -1,0 +1,11 @@
+name:  Exploring Variables
+on: 
+    workflow_dispatch: 
+#   schedule:
+#     - cron: "*/10 * * * *"
+jobs:
+    docker: 
+        runs-on: ubuntu:latest
+        steps:
+        - name: Docker Build
+          run: echo docker build
