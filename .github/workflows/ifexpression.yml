@@ -17,6 +17,6 @@ jobs:
         needs: docker
         steps:
         - name: Docker Build
-          timeout-minutes: 1 
+          timeout-minutes: 2 
           run: |
            echo docker build
